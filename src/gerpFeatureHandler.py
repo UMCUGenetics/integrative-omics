@@ -26,7 +26,7 @@ class gerpFeatureHandler:
 			attribute1 (type): In here, you describe all attributes that the class has, what their types are, and what they are/do
 	"""
 	
-	def annotate(self, regions, enabledFeatures = None):
+	def annotate(self, regions, gerpdata, enabledFeatures = None):
 		"""
 			The annotate function is mandatory. This function should be called from a database handler, such as the FlatFileDb class. It should have one return value, which contains annotations.
 			
@@ -44,7 +44,11 @@ class gerpFeatureHandler:
 		"""
 		
 		#annotations = your own function that returns the annotations in the right format, or it can be formatted within this function
+		annotations = self.OverlapWithConstrainedElement(regions, gerpdata)
 		
 		return annotations
 	
-	#Define the rest of your functions here
+	def OverlapWithConstrainedElement(self, regions, gerpdata):
+		annotations = dict()
+		# doe dingen
+		return annotations
